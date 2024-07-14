@@ -23,6 +23,7 @@
   --portal: var(--gray-3);
   --form: var(--blue-3);
   --error: var(--red);
+  /* Fonts */
   --title-h2: 1.063rem;
   --title-h3: 1.5rem;
   --subtitle: 0.75rem;

@@ -1,18 +1,27 @@
 @media (375px < width) {
   :root {
     --title-h2: 1.25rem;
-    --title-h3: 1.5rem;
-    --subtitle: 0.75rem;
     --text: 0.938rem;
-    --body: 0.938rem;
   }
 
   .wrapper {
     padding: 24px;
   }
 
+  .demo {
+    row-gap: 24px;
+  }
+
   .demo_wrap {
     gap: 18px;
+  }
+
+  .demo_text {
+    margin-bottom: 6px;
+  }
+
+  .demo_img {
+    max-height: 360px;
   }
 
   .btn_cta {
@@ -23,10 +32,21 @@
 @media (768px < width) {
   :root {
     --title-h2: 1.625rem;
-    --title-h3: 1.5rem;
-    --subtitle: 0.75rem;
     --text: 1.063rem;
-    --body: 0.938rem;
+    --body: 1.125rem;
+  }
+
+  :where(.button) {
+    padding: 12px 14px;
+    gap: 42px;
+  }
+
+  .btn_icon {
+    padding: 10px;
+  }
+
+  .wrapper {
+    padding: 36px 40px;
   }
 
   .demo {
@@ -34,8 +54,16 @@
   }
 
   .demo_wrap {
-    max-width: 538px;
-    padding: 24px;
+    max-width: 580px;
+    padding: 105px 0 105px 72px;
+  }
+
+  .demo_text {
+    margin-bottom: 18px;
+  }
+
+  .demo_img {
+    max-height: 100%;
   }
 
   .input {
@@ -43,12 +71,17 @@
   }
 }
 
-@media (1440 < width) {
+@media (1440px < width) {
   :root {
     --title-h2: 1.875rem;
-    --title-h3: 1.5rem;
-    --subtitle: 0.75rem;
-    --text: 1.063rem;
-    --body: 0.938rem;
+  }
+
+  .demo_wrap {
+    padding: 102px 0 102px 72px;
+  }
+
+  .demo_img {
+    max-height: 450px;
+    max-width: 910px;
   }
 }
