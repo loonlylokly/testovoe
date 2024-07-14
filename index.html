@@ -4,10 +4,64 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Тестовое</title>
+    <meta name="description" content="Демо версия продукта" />
+    <meta name="keywords" content="демо, демо-версия, попробовать бесплатно" />
+    <meta property="og:title" content="Лучший сайт в интернете" />
+    <meta
+      property="og:description"
+      content="Попробуйте демо-версию нашего продукта"
+    />
+    <!-- <meta property="og:image" content="" />
+    <meta property="og:url" content="" /> -->
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main class="wrapper">
+      <div class="demo">
+        <div class="demo_wrap">
+          <h2 class="demo_title">Демо-версия</h2>
+          <p class="demo_text">
+            За 18 лет деятельности было реализовано более 500 крупных, а так же,
+            не менее 2500 средних и малых проектов. Используя знания и
+            накопленный опыт мы можем предложить
+          </p>
+          <button class="button" type="button" onClick="openAuthDialog()">
+            <div class="btn_text">Попробовать бесплатно</div>
+            <div class="btn_icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 7H17V17"
+                  stroke="#1F4284"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 17L17 7"
+                  stroke="#1F4284"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <img
+          class="demo_img"
+          src="/public/images/promo.jpeg"
+          alt="Компьютер с шестеренками на экране"
+          loading="eager"
+          decoding="sync"
+        />
+      </div>
+    </main>
+    <script async type="module" src="/src/main.ts"></script>
   </body>
 </html>
