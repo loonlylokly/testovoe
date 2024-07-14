@@ -13,6 +13,9 @@ const closeAuthDialogBtn = window.document.getElementById(
 ) as HTMLButtonElement | null;
 
 authDialog?.addEventListener("close", returnScroll);
+authDialog?.addEventListener("click", (e) =>
+  closeOnBackDropClick({ currentTarget: authDialog, target: e.target }),
+);
 openAuthDialogBtn?.addEventListener("click", openAuthDialog);
 closeAuthDialogBtn?.addEventListener("click", () => authDialog?.close());
 
@@ -23,4 +26,18 @@ function openAuthDialog() {
 
 function returnScroll() {
   document.body.classList.remove("scroll-lock");
+}
+
+function closeOnBackDropClick({
+  currentTarget,
+  target,
+}: {
+  target: EventTarget | null;
+  currentTarget: HTMLDialogElement;
+}) {
+  const dialogElement = currentTarget;
+  const isClickedOnBackDrop = target === dialogElement;
+  if (isClickedOnBackDrop) {
+    dialogElement.close();
+  }
 }
