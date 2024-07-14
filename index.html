@@ -7,7 +7,7 @@
     <title>Тестовое</title>
     <meta name="description" content="Демо версия продукта" />
     <meta name="keywords" content="демо, демо-версия, попробовать бесплатно" />
-    <meta property="og:title" content="Лучший сайт в интернете" />
+    <meta property="og:title" content="Тестовое задание" />
     <meta
       property="og:description"
       content="Попробуйте демо-версию нашего продукта"
@@ -25,11 +25,7 @@
             не менее 2500 средних и малых проектов. Используя знания и
             накопленный опыт мы можем предложить
           </p>
-          <button
-            class="button btn_cta"
-            type="button"
-            onClick="openAuthDialog()"
-          >
+          <button class="button btn_cta" type="button" id="openAuthDialogBtn">
             <div class="btn_text">Попробовать бесплатно</div>
             <div class="btn_icon">
               <svg
@@ -66,6 +62,80 @@
         />
       </div>
     </main>
+
+    <dialog id="authDialog" aria-labelledby="authTitle" aria-modal="true">
+      <div class="dialog_wrapper">
+        <div class="dialog-close">
+          <button
+            class="button btn_close"
+            type="button"
+            id="closeAuthDialogBtn"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 6L18 18"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <form class="auth_form" id="authForm">
+          <h3 class="auth_title" id="authTitle">Войти в систему</h3>
+          <input
+            class="input auth_login"
+            type="text"
+            id="login"
+            name="emailPhone"
+            placeholder="Email/Телефон"
+            autofocus
+            autocomplete="email"
+            required
+          />
+          <input
+            class="input auth_password"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Пароль"
+            autocomplete="current-password"
+            required
+          />
+
+          <div class="checkbox auth_checkbox">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="remember"
+              name="remember"
+            />
+            <label for="remember">Запомнить пароль</label>
+          </div>
+          <a class="link auth_restore" href="restore">Восстановить</a>
+          <button class="button btn_cta auth_btn-login" type="submit">
+            Войти
+          </button>
+          <a class="button btn_secondary auth_btn-reg" href="/reg"
+            >Зарегистрироваться</a
+          >
+        </form>
+      </div>
+    </dialog>
     <script async type="module" src="/src/main.ts"></script>
   </body>
 </html>
