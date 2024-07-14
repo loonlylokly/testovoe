@@ -208,6 +208,14 @@ body {
   }
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid:placeholder-shown {
+  border: none;
+}
+
 input[type="checkbox"] {
   appearance: none;
   position: relative;

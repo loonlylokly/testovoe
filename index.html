@@ -103,9 +103,12 @@
             id="login"
             name="emailPhone"
             placeholder="Email/Телефон"
+            pattern="(((\+7)|(7)|(8))\d{10})|((([0-9A-Za-z]{1}[\-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[\-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([\-A-Za-z]{1,}\.){1,2}[\-A-Za-z]{2,})|((([0-9А-Яа-я]{1}[\-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([\-А-Яа-я]{1,}\.){1,2}[\-А-Яа-я]{2,})"
             autofocus
             autocomplete="email"
             required
+            title="Номер телефона +7 и 10 цифр или ваш email"
+            aria-description="Номер телефона в формате +7 и десять цифр номера или ваш email как на латинице, так и на кириллице"
           />
           <input
             class="input auth_password"
@@ -113,8 +116,13 @@
             id="password"
             name="password"
             placeholder="Пароль"
+            minlength="8"
+            maxlength="24"
+            pattern="[a-zA-Z0-9!@#\$%\^\&*_=+\-]{8,24}"
             autocomplete="current-password"
             required
+            title="Пароль может содержать латинские буквы A-Z и a-z, цифры и !@#$%^&*_-+="
+            aria-description="Пароль может содержать латинские буквы верхнего и нижнего регистра, цифры и такие символы как !@#$%^&*_-+="
           />
 
           <div class="checkbox auth_checkbox">
@@ -123,6 +131,7 @@
               type="checkbox"
               id="remember"
               name="remember"
+              value="1"
             />
             <label for="remember">Запомнить пароль</label>
           </div>

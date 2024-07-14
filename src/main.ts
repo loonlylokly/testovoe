@@ -41,3 +41,31 @@ function closeOnBackDropClick({
     dialogElement.close();
   }
 }
+
+const authForm = window.document.getElementById("authForm");
+authForm?.addEventListener("submit", handleSubmitFormAuth);
+
+function handleSubmitFormAuth(e: SubmitEvent) {
+  e.preventDefault();
+  const data = new FormData(e.target as HTMLFormElement);
+  console.log(Array.from(data.entries()));
+
+  if (validate(data)) {
+    onSuccess();
+  } else {
+    onError("Ошибка");
+  }
+}
+
+function validate(data: FormData) {
+  console.log(data);
+  return true;
+}
+
+function onSuccess() {
+  alert("Вы успешна авторизованы");
+}
+
+function onError(error: string) {
+  alert(error);
+}
