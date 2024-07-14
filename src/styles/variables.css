@@ -1,0 +1,34 @@
+:root {
+  --white: 0 0% 100%; /*   #ffffff */
+  --black: 0 0% 0%; /*   #000000 */
+  --gray-1: 0 0% 45%; /*   #727272 */
+  --gray-2: 0 0% 19%; /*   #323232 */
+  --gray-3: 220 66% 96%; /* #F0F4FC */
+  --blue-1: 219 62% 32%; /*   #1F4284 */
+  --blue-2: 219 62% 37%; /*   #244C98 */
+  --blue-3: 219 63% 90%; /*   #D7E2F6 */
+  --blue-4: 220 60% 95%; /*   #EBF0FA */
+  --red: 7 45% 50%;
+  --primary: var(--blue-1);
+  --onPrimary: var(--white);
+  --secondary: var(--white);
+  --onSecondary: var(--black);
+  --cta: var(--blue-2);
+  --onCta: var(--white);
+  --onCta-hover: var(--gray-1);
+  --background: var(--white);
+  --onBackground: var(--gray-2);
+  --surface: var(--blue-4);
+  --onSurface: var(--gray-1);
+  --portal: var(--gray-3);
+  --form: var(--blue-3);
+  --error: var(--red);
+  --title-h2: 1.063rem;
+  --title-h3: 1.5rem;
+  --subtitle: 0.75rem;
+  --text: 0.813rem;
+  --body: 0.938rem;
+  --fz-input: 1.125rem;
+  --fz-link: 1.2rem;
+  --manrope: Manrope;
+}

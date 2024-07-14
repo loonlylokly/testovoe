@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "prepare": "husky",
     "prettier": "prettier .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "style": "stylelint .",
+    "style-fix": "stylelint . --fix"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
